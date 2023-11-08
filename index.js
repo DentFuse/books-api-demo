@@ -2,10 +2,10 @@ import express from "express";
 import * as models from "./models.js";
 
 const app = express();
-const port = 19132;
+const port = process.env.PORT || 19132;
 async function main() {
   await models.connect();
-  app.listen(process.env.PORT || port, () => {
+  app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
 }
