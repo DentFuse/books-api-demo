@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 export const connect = async () => {
   return new Promise((resolve, reject) => {
